@@ -11,27 +11,27 @@ Challenges
 HERE ARE SOME SCREENSHOTS TO SHOW I PROCEDED IN A MINMALISTIC WAY
 
 flask app runned locally
-![alt text](<Screenshot (524).png>)
+![alt text](<screenshots_ignore/1.png>)
 
 Build both images
-![](<Screenshot (526).png>)
+![](<screenshots_ignore/2.png>)
 
 Run app.py container binded to 8000 local hos
-![](<Screenshot (527).png>)
+![](<screenshots_ignore/3.png>)
 running docker images with proxy
-![](<Screenshot (531).png>)
+![](<screenshots_ignore/4.png>)
 nginx logs
-![](<Screenshot (532).png>)
+![](<screenshots_ignore/5.png>)
 
 then i thought if there is nginx why not load balance it
 bulid images scled to 3
-![](<Screenshot (533).png>)
+![](<screenshots_ignore/6.png>)
 refresh 1
-![](<Screenshot (535).png>)
+![](<screenshots_ignore/7.png>)
 refresh 2
-![](<Screenshot (536).png>)
+![](<screenshots_ignore/8.png>)
 local host and port binding
-![alt text](<Screenshot (537).png>)
+![alt text](<screenshots_ignore/9.png>)
 
 
 
@@ -41,23 +41,31 @@ Challenges with cloud deployemt on AWS EC2 INSTANCE
 3) i first pushed code through local machine on git hub then clone to my ec2 machien then installed docker and everything was same afterwards to localmachine
     
 
-    my public ip is 65.1.248.56 
-  my public ipv4 dns ec2-65-1-248-56.ap-south-1.compute.amazonaws.com
+     my public ip is 65.1.248.56 
+  
+     my public ipv4 dns ec2-65-1-248-56.ap-south-1.compute.amazonaws.com       
+  
+  
+     IT Will remain up for you
    
     Running ec2 instance
-![alt text](<Screenshot (539).png>)
+![alt text](<screenshots_ignore/10.png>)
 
   cloned from git
-  ![alt text](<Screenshot (541).png>)
+  ![alt text](<screenshots_ignore/11.png>)
 
   build only app.py image and runned it on http://<ec2-public-ip>:8000
-  ![alt text](<Screenshot (545).png>)
+  ![alt text](<screenshots_ignore/12.png>)
 
   docker compose build
 
-  ![alt text](<Screenshot (549).png>) # note that here i have specified port of machine to inside docker-compose as i was using  bridge driver isloated from host which diiferent from pushed code on github
+  ![alt text](<screenshots_ignore/13.png>)
+  
+   # note that here i have specified port of machine to inside docker-compose as i was using  bridge driver isloated from host which diiferent from pushed code on github
 
-  ![ ](<Screenshot (548).png>)                                  
+  ![](<screenshots_ignore/14.png>)      
+
+  The log entry shows a 404 for the /favicon.ico, which means that when the browser attempts to retrieve the favicon (the little icon that appears in the browser tab), it's not found.it can be resolved by adding a favicon.ico file to flask app directory                             
 
 
   
