@@ -1,14 +1,14 @@
 Challenges
-1) netifaces lib was not added and also netifaces plus supports the advance version of python so added that
+1) netifaces lib was not added intially and was absent in pip list  also netifaces plus supports the advance version of python so added that
 2) During creating docker image for app corrrected a lot of intentional errors such unmatched worker directory in Dockerfile
-3) the nginx Dockerfile  was containing a lot errors fixed that wrong port declarations were there and wrong directory which doest not exist in master folder
-4) then after bulding both images inside docker-compose under services changed the intentional changes 
-5) once i named nginix inside Dockerfile unkownlingly so it was contardicting the compose file so after reviewing i fixed it                                                   
-6) in order to run both container i runned docker compose up but intially network was not created then i have to do some changes in compose file then buils and run agian
-7) I was thinking of scale up the app so intailly it was showing error on running docker compose then i found inside compose the host port is explicitly binded so i removed it then i runned so it was running with assinged random ports of host all 3
+3) the nginx Dockerfile  was containing a lot errors fixed that wrong port declarations were there a wrong directory which doest not exist in master folder
+4) then after bulding both images inside docker-compose under services changed the intentional errors 
+5) once i named nginix inside Dockerfile unkownlingly it should be nginx so it was contardicting the compose file so after reviewing it fixed it                                                   
+6) in order to run both container i runned docker compose up but intially network was not created correctly then checked it thorugh network ls and logs so corrected compose file accordingly  then build and run agian
+7) I was thinking of scale up the app so intailly it was showing error on running docker compose then i found inside compose the host port is explicitly binded of the local host so i removed it then i runned so it was running with assinged random ports of host all 3 instances
 8) i make changes in app.py to show container id each time i hit refresh in case of scale up and using nginix proxy server as laodbalancer but intially it was not reflecting on hiting url so i have to rebuild the image of app.py fro sccratch then to docker compose run
  
-HERE ARE SOME SCREENSHOTS TO SHOW I PROCEDED IN A MINMALISTIC WAY
+HERE ARE SOME SCREENSHOTS TO SHOW  HOW I PROCEDED IN A MINMALISTIC WAY
 
 flask app runned locally
 ![alt text](<screenshots_ignore/1.png>)
@@ -16,20 +16,26 @@ flask app runned locally
 Build both images
 ![](<screenshots_ignore/2.png>)
 
-Run app.py container binded to 8000 local hos
+Run app.py container binded to 8000 local hosT
 ![](<screenshots_ignore/3.png>)
+
 running docker images with proxy
 ![](<screenshots_ignore/4.png>)
+
 nginx logs
 ![](<screenshots_ignore/5.png>)
+
 
 then i thought if there is nginx why not load balance it
 bulid images scled to 3
 ![](<screenshots_ignore/6.png>)
+
 refresh 1
 ![](<screenshots_ignore/7.png>)
+
 refresh 2
 ![](<screenshots_ignore/8.png>)
+
 local host and port binding
 ![alt text](<screenshots_ignore/9.png>)
 
@@ -61,7 +67,7 @@ Challenges with cloud deployemt on AWS EC2 INSTANCE
 
   ![alt text](<screenshots_ignore/13.png>)
   
-   # note that here i have specified port of machine to inside docker-compose as i was using  bridge driver isloated from host which diiferent from pushed code on github
+   # note that here i have specified port of machine to inside docker-compose as i was using  bridge driver isloated from host which is little  diiferent from pushed code on github
 
   ![](<screenshots_ignore/14.png>)      
 
