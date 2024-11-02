@@ -69,7 +69,7 @@ Challenges with cloud deployemt on AWS EC2 INSTANCE
 
   ![alt text](<screenshots_ignore/13.png>)
   
-   # note that here i have specified port of machine to inside docker-compose as i was using  bridge driver isloated from host which is little  diiferent from pushed code on github
+  note that here i have specified port of machine to inside docker-compose as i was using  bridge driver isloated from host which is little  diiferent from pushed code on github
 
   ![](<screenshots_ignore/14.png>)      
 
