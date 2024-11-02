@@ -22,13 +22,17 @@ def user_info():
     user_ip = request.remote_addr
     
     # Get system username (from environment)
-    username = request.headers.get('Username', 'Guest')
+    username = request.headers.get('Username', 'Md Faheem Akram')
     
     # Get MAC address
     mac_address = get_mac_address()
     
     # Get current timestamp
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") 
+    
+    container_id = socket.gethostname()
+
+
 
     # Display all details
     return f"""
@@ -38,7 +42,7 @@ def user_info():
         <p><b>MAC Address:</b> {mac_address}</p>
         <p><b>Username:</b> {username}</p>
         <p><b>Timestamp:</b> {timestamp}</p>
-        <br>
+  <p><b>Container ID:</b> {container_id}</p>  <!-- Display container ID -->
         <h3>Assignment completed successfully!</h3>
     </body>
     </html>

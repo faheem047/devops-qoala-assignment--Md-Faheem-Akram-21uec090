@@ -1,11 +1,10 @@
 FROM python:3.9
 
-WORKDIR /appp
+WORKDIR /app  
 
-COPY appy.py /app
+COPY app.py /app
 
-RUN pip install flask netiface
+RUN pip install flask netifaces-plus   
 
-EXPOSE "eight thousand"
-
-CMD ["pythn", "app.py"]
+EXPOSE 8000
+CMD ["python", "app.py"]  
