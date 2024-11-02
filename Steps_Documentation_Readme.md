@@ -36,6 +36,8 @@ refresh 1
 refresh 2
 ![](<screenshots_ignore/8.png>)
 
+note in both refresh conatiner id is different hitting same url 
+
 local host and port binding
 ![alt text](<screenshots_ignore/9.png>)
 
