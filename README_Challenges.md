@@ -32,3 +32,32 @@ refresh 2
 ![](<Screenshot (536).png>)
 local host and port binding
 ![alt text](<Screenshot (537).png>)
+
+
+
+Challenges with cloud deployemt on AWS EC2 INSTANCE
+1) No i want to write it first the sudo command always i forget
+2) Here after ssh client login i was able to communicte with my machine server only thing that make me sick was setting up inbound rules in secrity sections wher i have to add 8000 port for app and 22 for ssh and 80 for nginx
+3) i first pushed code through local machine on git hub then clone to my ec2 machien then installed docker and everything was same afterwards to localmachine
+    
+
+    my public ip is 65.1.248.56 
+  my public ipv4 dns ec2-65-1-248-56.ap-south-1.compute.amazonaws.com
+   
+    Running ec2 instance
+![alt text](<Screenshot (539).png>)
+
+  cloned from git
+  ![alt text](<Screenshot (541).png>)
+
+  build only app.py image and runned it on http://<ec2-public-ip>:8000
+  ![alt text](<Screenshot (545).png>)
+
+  docker compose build
+
+  ![alt text](<Screenshot (549).png>) # note that here i have specified port of machine to inside docker-compose as i was using  bridge driver isloated from host which diiferent from pushed code on github
+
+  ![ ](<Screenshot (548).png>)                                  
+
+
+  
